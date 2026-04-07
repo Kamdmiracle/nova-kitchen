@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HomeTaste Kitchen</title>
+
+  <style>
+    * {margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif;}
+
+    body {
+      background: linear-gradient(135deg, #fff7ed, #ffe4d6);
+      color:#2c2c2c;
+    }
+
+    header {
+      background:#7c2d12;
+      color:white;
+      padding:15px 40px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      position:sticky;top:0;
+    }
+
+    header img {height:30px;margin-left:10px;}
+
+    nav a {
+      color:white;
+      margin-left:18px;
+      text-decoration:none;
+    }
+
+    .hero {
+      background:url('/mnt/data/kitchen.jpg') center/cover no-repeat;
+      color:white;
+      text-align:center;
+      padding:140px 20px;
+      position:relative;
+    }
+
+    .hero::after {
+      content:'';
+      position:absolute;
+      top:0;left:0;width:100%;height:100%;
+      background:rgba(0,0,0,0.6);
+    }
+
+    .hero-content {
+      position:relative;
+      z-index:2;
+      animation:fadeIn 2s ease;
+    }
+
+    @keyframes fadeIn {
+      from {opacity:0; transform:translateY(20px);} 
+      to {opacity:1; transform:translateY(0);} 
+    }
+
+    .btn {
+      padding:12px 20px;
+      margin:5px;
+      border:none;
+      border-radius:6px;
+      cursor:pointer;
+    }
+
+    .btn-primary {background:#ea580c;color:white;}
+    .btn-outline {background:transparent;border:1px solid white;color:white;}
+
+    section {padding:80px 40px;}
+
+    .section-title {
+      text-align:center;
+      font-size:32px;
+      margin-bottom:30px;
+      color:#7c2d12;
+    }
+
+    .about {
+      display:flex;
+      gap:30px;
+      align-items:center;
+      max-width:1000px;
+      margin:auto;
+    }
+
+    .about img {width:50%;border-radius:10px;}
+
+    .services {
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      gap:20px;
+    }
+
+    .card {
+      background:white;
+      border-radius:12px;
+      padding:20px;
+      text-align:center;
+      transition:0.3s;
+    }
+
+    .card img {width:100%;border-radius:10px;margin-bottom:10px;}
+
+    .card:hover {
+      transform:translateY(-8px);
+      box-shadow:0 10px 20px rgba(0,0,0,0.1);
+    }
+
+    .portfolio {
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:20px;
+    }
+
+    .meal {
+      background:white;
+      padding:10px;
+      border-radius:10px;
+      text-align:center;
+      transition:0.3s;
+    }
+
+    .meal img {
+      width:100%;
+      border-radius:10px;
+    }
+
+    .meal:hover {
+      transform:scale(1.05);
+    }
+
+    .portfolio img {
+      width:100%;
+      border-radius:10px;
+      transition:0.3s;
+    }
+
+    .portfolio img:hover {
+      transform:scale(1.05);
+    }
+
+    .testimonials {
+      background:#fff1e6;
+      text-align:center;
+      padding:60px;
+    }
+
+    footer {
+      background:#7c2d12;
+      color:white;
+      text-align:center;
+      padding:20px;
+    }
+
+    .flag {
+      margin-top:10px;
+      height:30px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div style="display:flex;align-items:center;gap:12px;">
+    <h1 style="margin:0;">HomeTaste Kitchen</h1>
+    <div style="display:flex;align-items:center;gap:6px;margin-left:10px;">
+      <img src="/mnt/data/nigerian flag.jpg" class="flag" alt="Nigeria Flag">
+      <img src="/mnt/data/british flag.jpg" class="flag" alt="UK Flag">
+    </div>
+  </div>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#portfolio">Meals</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-content">
+    <h2>Authentic Nigerian Meals Delivered to Your Door</h2>
+    <p>Fresh, home-style Nigerian dishes prepared with love and delivered weekly.</p>
+    <button class="btn btn-primary">Subscribe Now</button>
+    <button class="btn btn-outline">Book Cooking Service</button>
+  </div>
+</section>
+
+<section id="about">
+  <h2 class="section-title">About Us</h2>
+  <div class="about">
+    <img src="img/kitchen.jpeg" alt="kitchen">
+    <p>
+      HomeTaste Kitchen provides authentic Nigerian meals for busy professionals and families in London. Our services include weekly meal prep subscriptions and in-home cooking experiences.
+    </p>
+  </div>
+</section>
+
+<section id="services">
+  <h2 class="section-title">Our Services</h2>
+  <div class="services">
+    <div class="card">
+      Weekly Meal Prep
+    </div>
+    <div class="card">
+      In-Home Cooking
+    </div>
+    <div class="card">
+      Custom Meal Plans
+    </div>
+  </div>
+</section>
+
+<section id="portfolio">
+  <h2 class="section-title">Our Meals</h2>
+  <div class="portfolio">
+
+    <div class="meal">
+      <img src="img/egusi.jpg.jpg" alt="Egusi Soup">
+      <p>Egusi Soup & Pounded Yam</p>
+    </div>
+
+    <div class="meal">
+      <img src="img/jollof.jpg.jpg" alt="Jollof Rice">
+      <p>Jollof Rice & Chicken</p>
+    </div>
+
+    <div class="meal">
+      <img src="img/moimoi.jpg.jfif" alt="Moi Moi">
+      <p>Moi Moi</p>
+    </div>
+
+    <div class="meal">
+      <img src="img/plantain.jpg.jpg" alt="Plantain and Beans">
+      <p>Fried Plantain & Beans</p>
+    </div>
+
+    <div class="meal">
+      <img src="img/peppersoup.jpg.jpeg" alt="Pepper Soup">
+      <p>Pepper Soup</p>
+    </div>
+
+  </div>
+</section>
+
+<section class="testimonials">
+  <h2>What Our Customers Say</h2>
+  <p>“The taste reminds me of home. Absolutely amazing!”</p>
+</section>
+
+<footer>
+  <p>© 2026 HomeTaste Kitchen</p>
+</footer>
+
+</body>
+</html>
